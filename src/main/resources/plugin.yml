@@ -1,0 +1,8 @@
+name: TQ Magic Eraser
+main: com.eltorqiro.bukkit.MagicEraser.MagicEraser
+version: 0.0.6
+
+commands:
+  tqme:
+    description: Core TQ Magic Eraser command
+    usage: /tqme <copy | paste> [xX yY zZ]
