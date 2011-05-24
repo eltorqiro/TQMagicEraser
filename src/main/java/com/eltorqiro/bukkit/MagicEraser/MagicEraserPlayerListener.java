@@ -3,6 +3,7 @@ package com.eltorqiro.bukkit.MagicEraser;
 
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
+import org.bukkit.event.block.Action;
 import org.bukkit.event.player.PlayerListener;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.block.Block;
@@ -22,6 +23,10 @@ public class MagicEraserPlayerListener extends PlayerListener {
 
     @Override
     public void onPlayerInteract(PlayerInteractEvent event) {
+    	if(event.getAction() != Action.RIGHT_CLICK_BLOCK) {
+    		return;
+    	}
+    	
     	Block block = event.getClickedBlock();
     	ItemStack item = event.getItem();
     	Player player = event.getPlayer();
